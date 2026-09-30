@@ -66,3 +66,7 @@ Registro de lo validado en la entrevista por fases. No accesible para el agente.
 - Registro en esquema `registro` (lo escribe el servicio): fecha/hora, usuario, pregunta, herramientas y parámetros, nº de filas, latencia, respuesta, errores. Sin datos completos. Retención 90 días.
 - Límite: 30 consultas/hora.
 - El dueño acepta que los datos del negocio se envíen a la API de Anthropic.
+
+## Fase 6 — Casos de uso
+- Lista de 30 casos validada: `docs/casos_de_uso.md` (incluye top 5 para demo, aceptado por defecto).
+- Beneficio neto: no disponible en el MVP. Predicciones: sí, simples y marcadas 💡.
