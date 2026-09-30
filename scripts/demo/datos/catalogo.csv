@@ -1,0 +1,151 @@
+sku,nombre,linea,categoria,subcategoria,precio_usd,demanda_dia,perfil,proveedor
+CAR-001,Pollo troceado caja 10 lb,Mercado,Alimentos,Cárnicos y congelados,22.00,6.0,estable,Distribuidora Habana Alimentos SRL
+CAR-002,Muslos de pollo 5 lb,Mercado,Alimentos,Cárnicos y congelados,11.50,5.0,estable,Distribuidora Habana Alimentos SRL
+CAR-003,Picadillo de pollo 1 kg,Mercado,Alimentos,Cárnicos y congelados,3.20,6.0,estable,Distribuidora Habana Alimentos SRL
+CAR-004,Salchichas de pollo paquete 10 u,Mercado,Alimentos,Cárnicos y congelados,3.80,5.0,estable,Distribuidora Habana Alimentos SRL
+CAR-005,Jamón de pierna 1 lb,Mercado,Alimentos,Cárnicos y congelados,5.50,2.5,fiestas,Distribuidora Habana Alimentos SRL
+CAR-006,Bistec de cerdo 1 kg,Mercado,Alimentos,Cárnicos y congelados,9.00,3.0,fiestas,Distribuidora Habana Alimentos SRL
+CAR-007,Hamburguesas de res paquete 10 u,Mercado,Alimentos,Cárnicos y congelados,7.50,2.0,estable,Distribuidora Habana Alimentos SRL
+CAR-008,Mortadella 1 lb,Mercado,Alimentos,Cárnicos y congelados,3.50,2.5,estable,Distribuidora Habana Alimentos SRL
+CAR-009,Chorizo 500 g,Mercado,Alimentos,Cárnicos y congelados,4.80,1.5,estable,Distribuidora Habana Alimentos SRL
+CAR-010,Filete de merluza 1 kg,Mercado,Alimentos,Cárnicos y congelados,8.50,1.2,estable,Distribuidora Habana Alimentos SRL
+CAR-011,Lomo ahumado 1 lb,Mercado,Alimentos,Cárnicos y congelados,6.80,1.2,fiestas,Distribuidora Habana Alimentos SRL
+CAR-012,Masas de cerdo 1 kg,Mercado,Alimentos,Cárnicos y congelados,8.00,2.0,fiestas,Distribuidora Habana Alimentos SRL
+CAR-013,Hígado de pollo 1 kg,Mercado,Alimentos,Cárnicos y congelados,3.00,1.0,estable,Distribuidora Habana Alimentos SRL
+CAR-014,Croquetas de pollo 1 kg,Mercado,Alimentos,Cárnicos y congelados,4.50,2.0,estable,Distribuidora Habana Alimentos SRL
+CAR-015,Queso gouda 1 lb,Mercado,Alimentos,Cárnicos y congelados,6.50,1.5,estable,Distribuidora Habana Alimentos SRL
+GRA-001,Arroz 1 kg,Mercado,Alimentos,Granos y básicos,2.20,9.0,estable,Importadora Caribe Sur SRL
+GRA-002,Arroz 5 kg,Mercado,Alimentos,Granos y básicos,9.50,3.0,estable,Importadora Caribe Sur SRL
+GRA-003,Frijoles negros 1 kg,Mercado,Alimentos,Granos y básicos,3.50,5.0,estable,Importadora Caribe Sur SRL
+GRA-004,Frijoles colorados 1 kg,Mercado,Alimentos,Granos y básicos,3.60,2.5,estable,Importadora Caribe Sur SRL
+GRA-005,Azúcar blanca 1 kg,Mercado,Alimentos,Granos y básicos,2.10,6.0,estable,Importadora Caribe Sur SRL
+GRA-006,Harina de trigo 1 kg,Mercado,Alimentos,Granos y básicos,2.00,2.5,estable,Importadora Caribe Sur SRL
+GRA-007,Espaguetis 500 g,Mercado,Alimentos,Granos y básicos,1.30,6.0,estable,Importadora Caribe Sur SRL
+GRA-008,Coditos 500 g,Mercado,Alimentos,Granos y básicos,1.30,3.5,estable,Importadora Caribe Sur SRL
+GRA-009,Sal 1 kg,Mercado,Alimentos,Granos y básicos,0.90,2.0,estable,Importadora Caribe Sur SRL
+GRA-010,Aceite de girasol 1 L,Mercado,Alimentos,Granos y básicos,3.80,7.0,estable,Importadora Caribe Sur SRL
+GRA-011,Aceite de soya 5 L,Mercado,Alimentos,Granos y básicos,15.00,1.5,estable,Importadora Caribe Sur SRL
+GRA-012,Leche en polvo 1 kg,Mercado,Alimentos,Granos y básicos,9.50,4.0,estable,Importadora Caribe Sur SRL
+GRA-013,Café molido 250 g,Mercado,Alimentos,Granos y básicos,4.50,4.0,estable,Importadora Caribe Sur SRL
+GRA-014,Huevos cartón 30 u,Mercado,Alimentos,Granos y básicos,9.00,4.0,estable,Distribuidora Habana Alimentos SRL
+GRA-015,Puré de tomate 400 g,Mercado,Alimentos,Granos y básicos,1.20,4.0,estable,Importadora Caribe Sur SRL
+DES-001,Atún en lata 160 g,Mercado,Alimentos,Despensa y conservas,1.80,3.0,estable,Importadora Caribe Sur SRL
+DES-002,Sardinas en lata 125 g,Mercado,Alimentos,Despensa y conservas,1.20,2.5,estable,Importadora Caribe Sur SRL
+DES-003,Mayonesa 450 g,Mercado,Alimentos,Despensa y conservas,3.20,2.0,estable,Importadora Caribe Sur SRL
+DES-004,Kétchup 400 g,Mercado,Alimentos,Despensa y conservas,2.30,1.5,estable,Importadora Caribe Sur SRL
+DES-005,Galletas de soda paquete,Mercado,Alimentos,Despensa y conservas,1.50,4.0,estable,Importadora Caribe Sur SRL
+DES-006,Mermelada de guayaba 500 g,Mercado,Alimentos,Despensa y conservas,2.50,1.2,estable,Importadora Caribe Sur SRL
+DES-007,Leche condensada lata,Mercado,Alimentos,Despensa y conservas,2.20,2.5,estable,Importadora Caribe Sur SRL
+DES-008,Chocolate en polvo 400 g,Mercado,Alimentos,Despensa y conservas,3.80,1.5,estable,Importadora Caribe Sur SRL
+DES-009,Compota de frutas 113 g,Mercado,Alimentos,Despensa y conservas,0.90,3.0,estable,Importadora Caribe Sur SRL
+DES-010,Sazón completo 100 g,Mercado,Alimentos,Despensa y conservas,1.00,2.0,estable,Importadora Caribe Sur SRL
+DES-011,Pan de molde 500 g,Mercado,Alimentos,Despensa y conservas,2.80,3.5,estable,Importadora Caribe Sur SRL
+BEB-001,Refresco de lata 355 ml,Mercado,Bebidas,Refrescos y aguas,0.90,12.0,verano_suave,Importadora Caribe Sur SRL
+BEB-002,Refresco 1.5 L,Mercado,Bebidas,Refrescos y aguas,2.20,4.0,verano_suave,Importadora Caribe Sur SRL
+BEB-003,Agua natural 1.5 L,Mercado,Bebidas,Refrescos y aguas,1.00,6.0,verano_suave,Importadora Caribe Sur SRL
+BEB-004,Jugo de fruta 1 L,Mercado,Bebidas,Refrescos y aguas,2.00,2.5,estable,Importadora Caribe Sur SRL
+BEB-005,Malta lata 355 ml,Mercado,Bebidas,Refrescos y aguas,1.00,4.0,estable,Importadora Caribe Sur SRL
+BEB-006,Refresco en polvo sobre,Mercado,Bebidas,Refrescos y aguas,0.30,6.0,verano_suave,Importadora Caribe Sur SRL
+BEB-007,Cerveza nacional lata 355 ml,Mercado,Bebidas,Cervezas y licores,1.20,12.0,fiestas,Importadora Caribe Sur SRL
+BEB-008,Cerveza importada lata 330 ml,Mercado,Bebidas,Cervezas y licores,1.10,8.0,fiestas,Importadora Caribe Sur SRL
+BEB-009,Ron añejo 700 ml,Mercado,Bebidas,Cervezas y licores,8.50,2.0,fiestas,Importadora Caribe Sur SRL
+BEB-010,Vino tinto 750 ml,Mercado,Bebidas,Cervezas y licores,7.00,0.8,fiestas,Importadora Caribe Sur SRL
+COM-001,Combo básico familiar,Mercado,Combos,Combos de alimentos,45.00,1.5,estable,Importadora Caribe Sur SRL
+COM-002,Combo pollo y arroz,Mercado,Combos,Combos de alimentos,35.00,1.8,estable,Importadora Caribe Sur SRL
+COM-003,Combo desayuno,Mercado,Combos,Combos de alimentos,25.00,1.0,estable,Importadora Caribe Sur SRL
+COM-004,Combo cumpleaños,Mercado,Combos,Combos de alimentos,60.00,0.6,fiestas,Importadora Caribe Sur SRL
+COM-005,Combo cárnico,Mercado,Combos,Combos de alimentos,55.00,1.0,fiestas,Distribuidora Habana Alimentos SRL
+COM-006,Combo de aseo,Mercado,Combos,Combos de aseo,28.00,0.8,estable,Higiene Total Mipyme
+COM-007,Combo Día de las Madres,Mercado,Combos,Combos de temporada,50.00,1.0,madres,Importadora Caribe Sur SRL
+COM-008,Combo fin de año,Mercado,Combos,Combos de temporada,70.00,1.0,fin_ano,Importadora Caribe Sur SRL
+ASE-001,Detergente en polvo 1 kg,Mercado,Aseo e higiene,Limpieza del hogar,3.20,4.0,estable,Higiene Total Mipyme
+ASE-002,Jabón de baño pack 3 u,Mercado,Aseo e higiene,Higiene personal,2.50,4.0,estable,Higiene Total Mipyme
+ASE-003,Pasta dental 100 ml,Mercado,Aseo e higiene,Higiene personal,1.80,3.0,estable,Higiene Total Mipyme
+ASE-004,Champú 400 ml,Mercado,Aseo e higiene,Higiene personal,3.50,2.0,estable,Higiene Total Mipyme
+ASE-005,Desodorante roll-on,Mercado,Aseo e higiene,Higiene personal,2.80,2.0,estable,Higiene Total Mipyme
+ASE-006,Papel higiénico pack 4 rollos,Mercado,Aseo e higiene,Higiene personal,2.40,4.0,estable,Higiene Total Mipyme
+ASE-007,Cloro 1 L,Mercado,Aseo e higiene,Limpieza del hogar,1.20,3.0,estable,Higiene Total Mipyme
+ASE-008,Suavizante de ropa 1 L,Mercado,Aseo e higiene,Limpieza del hogar,2.80,1.2,estable,Higiene Total Mipyme
+ASE-009,Jabón de lavar barra,Mercado,Aseo e higiene,Limpieza del hogar,0.80,4.0,estable,Higiene Total Mipyme
+ASE-010,Toallas sanitarias paquete 10 u,Mercado,Aseo e higiene,Higiene personal,1.80,2.5,estable,Higiene Total Mipyme
+ASE-011,Pañales desechables paquete 30 u,Mercado,Aseo e higiene,Higiene personal,11.00,2.0,estable,Higiene Total Mipyme
+ASE-012,Máquinas de afeitar pack 3 u,Mercado,Aseo e higiene,Higiene personal,2.20,1.0,estable,Higiene Total Mipyme
+ASE-013,Lavaplatos líquido 500 ml,Mercado,Aseo e higiene,Limpieza del hogar,1.90,2.0,estable,Higiene Total Mipyme
+ASE-014,Toallitas húmedas paquete 80 u,Mercado,Aseo e higiene,Higiene personal,2.50,1.5,estable,Higiene Total Mipyme
+ASE-015,Crema hidratante 200 ml,Mercado,Aseo e higiene,Higiene personal,3.90,0.8,estable,Higiene Total Mipyme
+ASE-016,Detergente líquido 3 L,Mercado,Aseo e higiene,Limpieza del hogar,7.50,0.0,estable,Higiene Total Mipyme
+FAR-001,Paracetamol 500 mg 20 tabletas,Mercado,Farmacia,Medicamentos,2.00,4.0,dengue,Distribuidora Farma Salud SRL
+FAR-002,Ibuprofeno 400 mg 20 tabletas,Mercado,Farmacia,Medicamentos,2.50,2.5,estable,Distribuidora Farma Salud SRL
+FAR-003,Dipirona 300 mg 20 tabletas,Mercado,Farmacia,Medicamentos,1.80,2.0,dengue,Distribuidora Farma Salud SRL
+FAR-004,Omeprazol 20 mg 14 cápsulas,Mercado,Farmacia,Medicamentos,3.00,1.2,estable,Distribuidora Farma Salud SRL
+FAR-005,Loratadina 10 mg 10 tabletas,Mercado,Farmacia,Medicamentos,2.20,1.2,estable,Distribuidora Farma Salud SRL
+FAR-006,Vitamina C 500 mg 30 tabletas,Mercado,Farmacia,Vitaminas,3.50,1.5,dengue,Distribuidora Farma Salud SRL
+FAR-007,Multivitaminas 30 tabletas,Mercado,Farmacia,Vitaminas,6.00,1.0,estable,Distribuidora Farma Salud SRL
+FAR-008,Sales de rehidratación oral sobre,Mercado,Farmacia,Medicamentos,0.80,3.0,dengue,Distribuidora Farma Salud SRL
+FAR-009,Alcohol 70 % 500 ml,Mercado,Farmacia,Primeros auxilios,2.50,1.5,estable,Distribuidora Farma Salud SRL
+FAR-010,Curitas caja 20 u,Mercado,Farmacia,Primeros auxilios,1.50,1.0,estable,Distribuidora Farma Salud SRL
+FAR-011,Termómetro digital,Mercado,Farmacia,Primeros auxilios,4.50,0.5,dengue,Distribuidora Farma Salud SRL
+FAR-012,Repelente de mosquitos 120 ml,Mercado,Farmacia,Primeros auxilios,4.00,2.0,dengue,Distribuidora Farma Salud SRL
+FER-001,Bombillo LED 9 W,Mercado,Ferretería,Electricidad,1.50,3.0,estable,Ferretería Mayorista El Tornillo
+FER-002,Extensión eléctrica 5 m,Mercado,Ferretería,Electricidad,6.50,1.0,estable,Ferretería Mayorista El Tornillo
+FER-003,Candado 40 mm,Mercado,Ferretería,Herramientas,4.00,0.6,estable,Ferretería Mayorista El Tornillo
+FER-004,Cinta aislante,Mercado,Ferretería,Electricidad,0.80,1.5,estable,Ferretería Mayorista El Tornillo
+FER-005,Tomacorriente doble,Mercado,Ferretería,Electricidad,2.50,0.8,estable,Ferretería Mayorista El Tornillo
+FER-006,Pegamento universal,Mercado,Ferretería,Herramientas,1.50,0.8,estable,Ferretería Mayorista El Tornillo
+FER-007,Juego de destornilladores 6 u,Mercado,Ferretería,Herramientas,7.00,0.4,estable,Ferretería Mayorista El Tornillo
+FER-008,Llave de paso 1/2 pulgada,Mercado,Ferretería,Plomería,4.50,0.5,estable,Ferretería Mayorista El Tornillo
+FER-009,Manguera de jardín 15 m,Mercado,Ferretería,Plomería,12.00,0.3,estable,Ferretería Mayorista El Tornillo
+FER-010,Pintura blanca 1 galón,Mercado,Ferretería,Pintura,18.00,0.5,estable,Ferretería Mayorista El Tornillo
+ENE-001,Planta eléctrica gasolina 3500 W,Envíos,Energía,Plantas eléctricas,650.00,0.25,energia,Energía Solar Import SRL
+ENE-002,Planta eléctrica gasolina 7500 W,Envíos,Energía,Plantas eléctricas,1150.00,0.08,energia,Energía Solar Import SRL
+ENE-003,Estación de energía portátil 1000 Wh,Envíos,Energía,Estaciones y baterías,690.00,0.2,energia,Energía Solar Import SRL
+ENE-004,Estación de energía portátil 300 Wh,Envíos,Energía,Estaciones y baterías,260.00,0.45,energia,Energía Solar Import SRL
+ENE-005,Panel solar 200 W,Envíos,Energía,Solar,150.00,0.35,energia,Energía Solar Import SRL
+ENE-006,Batería LiFePO4 12 V 100 Ah,Envíos,Energía,Estaciones y baterías,380.00,0.15,energia,Energía Solar Import SRL
+ENE-007,Inversor 3000 W,Envíos,Energía,Solar,320.00,0.12,energia,Energía Solar Import SRL
+ENE-008,Lámpara recargable LED,Envíos,Energía,Iluminación recargable,12.00,4.0,energia,Energía Solar Import SRL
+ENE-009,Ventilador recargable 16 pulgadas,Envíos,Energía,Iluminación recargable,75.00,1.2,energia_verano,Energía Solar Import SRL
+ENE-010,Linterna recargable,Envíos,Energía,Iluminación recargable,8.00,3.0,energia,Energía Solar Import SRL
+ENE-011,Power bank 20000 mAh,Envíos,Energía,Estaciones y baterías,25.00,2.0,energia,Energía Solar Import SRL
+ENE-012,Kit solar 3 bombillos,Envíos,Energía,Solar,45.00,0.5,energia,Energía Solar Import SRL
+ENE-013,Protector de voltaje,Envíos,Energía,Protección eléctrica,20.00,1.2,energia,Energía Solar Import SRL
+ENE-014,UPS 1000 VA,Envíos,Energía,Protección eléctrica,110.00,0.3,energia,Energía Solar Import SRL
+CLI-001,Ventilador de pedestal 18 pulgadas,Envíos,Climatización,Ventiladores,45.00,2.0,verano,Electro Hogar Importaciones
+CLI-002,Ventilador de techo,Envíos,Climatización,Ventiladores,70.00,0.4,verano,Electro Hogar Importaciones
+CLI-003,Ventilador de mesa 12 pulgadas,Envíos,Climatización,Ventiladores,28.00,1.2,verano,Electro Hogar Importaciones
+CLI-004,Aire acondicionado split 1 ton,Envíos,Climatización,Aires acondicionados,480.00,0.25,verano,Electro Hogar Importaciones
+CLI-005,Aire acondicionado split 1.5 ton,Envíos,Climatización,Aires acondicionados,620.00,0.12,verano,Electro Hogar Importaciones
+CLI-006,Aire acondicionado de ventana 1 ton,Envíos,Climatización,Aires acondicionados,390.00,0.1,verano,Electro Hogar Importaciones
+CLI-007,Enfriador evaporativo,Envíos,Climatización,Ventiladores,120.00,0.25,verano,Electro Hogar Importaciones
+ELE-001,Olla arrocera eléctrica,Envíos,Electrodomésticos,Cocina,35.00,0.9,estable,Electro Hogar Importaciones
+ELE-002,Olla de presión eléctrica,Envíos,Electrodomésticos,Cocina,65.00,0.7,estable,Electro Hogar Importaciones
+ELE-003,Freidora de aire 5 L,Envíos,Electrodomésticos,Cocina,85.00,0.5,estable,Electro Hogar Importaciones
+ELE-004,Microondas 20 L,Envíos,Electrodomésticos,Cocina,110.00,0.25,estable,Electro Hogar Importaciones
+ELE-005,Refrigerador 7 pies,Envíos,Electrodomésticos,Refrigeración,520.00,0.1,verano_suave,Electro Hogar Importaciones
+ELE-006,Freezer horizontal 7 pies,Envíos,Electrodomésticos,Refrigeración,480.00,0.12,verano_suave,Electro Hogar Importaciones
+ELE-007,Cocina de inducción,Envíos,Electrodomésticos,Cocina,55.00,0.6,estable,Electro Hogar Importaciones
+ELE-008,Hornilla eléctrica 1 quemador,Envíos,Electrodomésticos,Cocina,18.00,0.8,estable,Electro Hogar Importaciones
+ELE-009,Cocina de gas 4 hornillas,Envíos,Electrodomésticos,Cocina,260.00,0.08,estable,Electro Hogar Importaciones
+ELE-010,Balita de gas 15 lb llena,Envíos,Electrodomésticos,Cocina,45.00,1.0,estable,Energía Solar Import SRL
+ELE-011,Batidora de vaso,Envíos,Electrodomésticos,Cocina,35.00,0.4,estable,Electro Hogar Importaciones
+ELE-012,Cafetera eléctrica,Envíos,Electrodomésticos,Cocina,28.00,0.4,estable,Electro Hogar Importaciones
+ELE-013,Hervidor eléctrico,Envíos,Electrodomésticos,Cocina,20.00,0.4,estable,Electro Hogar Importaciones
+ELE-014,Sandwichera,Envíos,Electrodomésticos,Cocina,22.00,0.3,estable,Electro Hogar Importaciones
+ELE-015,Lavadora semiautomática 7 kg,Envíos,Electrodomésticos,Lavado y hogar,280.00,0.15,estable,Electro Hogar Importaciones
+ELE-016,Lavadora automática 8 kg,Envíos,Electrodomésticos,Lavado y hogar,520.00,0.06,estable,Electro Hogar Importaciones
+ELE-017,Plancha de ropa,Envíos,Electrodomésticos,Lavado y hogar,18.00,0.5,estable,Electro Hogar Importaciones
+ELE-018,Calentador de agua para ducha,Envíos,Electrodomésticos,Lavado y hogar,25.00,0.5,estable,Electro Hogar Importaciones
+ELE-019,Colchón foam matrimonial,Envíos,Electrodomésticos,Lavado y hogar,260.00,0.08,estable,Electro Hogar Importaciones
+TEC-001,Televisor 32 pulgadas,Envíos,Electrónica,Televisores,190.00,0.2,fiestas,TecnoMóvil Distribución
+TEC-002,Televisor 43 pulgadas smart,Envíos,Electrónica,Televisores,320.00,0.15,fiestas,TecnoMóvil Distribución
+TEC-003,Celular gama básica,Envíos,Electrónica,Celulares,120.00,0.4,estable,TecnoMóvil Distribución
+TEC-004,Celular gama media,Envíos,Electrónica,Celulares,230.00,0.3,estable,TecnoMóvil Distribución
+TEC-005,Tablet 10 pulgadas,Envíos,Electrónica,Celulares,150.00,0.12,estable,TecnoMóvil Distribución
+TEC-006,Audífonos inalámbricos,Envíos,Electrónica,Accesorios,20.00,0.8,estable,TecnoMóvil Distribución
+TEC-007,Bocina bluetooth,Envíos,Electrónica,Accesorios,30.00,0.5,fiestas,TecnoMóvil Distribución
+TEC-008,Cargador de celular,Envíos,Electrónica,Accesorios,8.00,1.5,estable,TecnoMóvil Distribución
+MOV-001,Moto eléctrica,Envíos,Movilidad,Motos y bicicletas,1800.00,0.04,estable,TecnoMóvil Distribución
+MOV-002,Bicicleta eléctrica,Envíos,Movilidad,Motos y bicicletas,950.00,0.05,estable,TecnoMóvil Distribución
+MOV-003,Triciclo eléctrico,Envíos,Movilidad,Motos y bicicletas,2200.00,0.03,estable,TecnoMóvil Distribución
+MOV-004,Batería para moto eléctrica 60 V,Envíos,Movilidad,Repuestos,420.00,0.06,estable,TecnoMóvil Distribución
+MOV-005,Casco para moto,Envíos,Movilidad,Repuestos,30.00,0.2,estable,TecnoMóvil Distribución

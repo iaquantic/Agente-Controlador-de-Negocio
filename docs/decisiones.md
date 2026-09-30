@@ -39,3 +39,8 @@ Registro de lo validado en la entrevista por fases. No accesible para el agente.
 - Apagones: algunos días con ventas físicas reducidas (sin afectar a la web).
 - Formas de pago: mezcla de efectivo CUP, transferencia CUP (Transfermóvil/EnZona) y efectivo USD; pagos mixtos ocasionales.
 - Tasas: histórico real diario de elTOQUE (`scripts/demo/datos/tasas_eltoque.csv`, 2025-10-01 a 2026-09-30).
+
+### Carga de datos (fase 3 cerrada)
+- Catálogo: opción (a) — 150 productos típicos del mercado cubano con categorías tipo Cuballama y precios USD estimados. Cuballama no se usó como fuente de datos (sus productos se cargan desde `/api/`, prohibido en su robots.txt).
+- Proveedores ficticios: 8. Historial generado del 1/10/2025 al 30/9/2026 11:30 (La Habana): 22 711 ventas (~55–72/día), ~1,11 M USD netos.
+- Generador y situaciones sembradas: `scripts/demo/` (ver README). El esquema temporal `gen` se eliminó de Supabase.
