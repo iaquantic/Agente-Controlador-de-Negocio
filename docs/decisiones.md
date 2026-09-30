@@ -44,3 +44,14 @@ Registro de lo validado en la entrevista por fases. No accesible para el agente.
 - Catálogo: opción (a) — 150 productos típicos del mercado cubano con categorías tipo Cuballama y precios USD estimados. Cuballama no se usó como fuente de datos (sus productos se cargan desde `/api/`, prohibido en su robots.txt).
 - Proveedores ficticios: 8. Historial generado del 1/10/2025 al 30/9/2026 11:30 (La Habana): 22 711 ventas (~55–72/día), ~1,11 M USD netos.
 - Generador y situaciones sembradas: `scripts/demo/` (ver README). El esquema temporal `gen` se eliminó de Supabase.
+
+## Fase 4 — Telegram (todas las propuestas aprobadas)
+- "Hoy" = fecha y hora actuales de La Habana (America/Havana). Implica que el negocio de demostración debe seguir recibiendo ventas cada día (proceso alimentador separado, fuera del alcance del agente) — a detallar en la fase 5.
+- Mensajes proactivos: resumen diario a las 19:30 + alertas urgentes inmediatas (agotado o riesgo de rotura de producto prioritario, caída fuerte de ventas). Excesos, sin movimiento, margen bajo y devoluciones van en el resumen.
+- Límites: máx. 3 alertas urgentes/día, sin repetir la misma alerta en 24 h, silencio 21:00–8:00 (se envía a las 8:00).
+- Comandos: /resumen, /ventas (botones hoy/semana/mes), /stock, /producto <nombre>, /alertas, /ayuda + texto libre.
+- Botones: solo de consulta (nunca acciones).
+- Español de Cuba, tuteo, cercano y directo, sin tecnicismos.
+- Cifras: USD primero y CUP entre paréntesis ("1 250,00 USD (≈ 927 500 CUP)"), CUP sin decimales, miles con espacio, coma decimal.
+- Hechos sin marca; 📊 cálculo, 💡 inferencia, ❔ no disponible; siempre periodo y hora de los datos.
+- Mensajes de 5–10 líneas, cifra clave arriba, emojis solo como iconos de sección, detalle bajo petición, solo texto en el MVP.
