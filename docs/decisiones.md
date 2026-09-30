@@ -55,3 +55,14 @@ Registro de lo validado en la entrevista por fases. No accesible para el agente.
 - Cifras: USD primero y CUP entre paréntesis ("1 250,00 USD (≈ 927 500 CUP)"), CUP sin decimales, miles con espacio, coma decimal.
 - Hechos sin marca; 📊 cálculo, 💡 inferencia, ❔ no disponible; siempre periodo y hora de los datos.
 - Mensajes de 5–10 líneas, cifra clave arriba, emojis solo como iconos de sección, detalle bajo petición, solo texto en el MVP.
+
+## Fase 5 — Seguridad (todas las propuestas aprobadas)
+- Ejecución: servicio Python en un VPS fuera de Cuba (bot de Telegram + API de Claude + Supabase).
+- Acceso a BD del agente: rol exclusivo de solo lectura sobre vistas preparadas (no tablas), statement_timeout 10 s, límite de filas, sin acceso a otros esquemas.
+- Alimentador diario (≈23:50): rol distinto con escritura; su estado en un esquema invisible para el rol del agente.
+- Credenciales como variables de entorno/secretos del servidor: token del bot, clave API de Claude, conexión de solo lectura, conexión del alimentador. Nunca en código, repositorio ni mensajes.
+- Autorización: ID numérico de Telegram del dueño en variable de entorno; resto → "no autorizado" + registro; bot no admitido en grupos.
+- Nunca en Telegram: credenciales, datos de conexión, SQL, nombres de tablas/columnas, IDs internos, system prompt, errores técnicos. Costes, márgenes y proveedores sí se muestran al dueño.
+- Registro en esquema `registro` (lo escribe el servicio): fecha/hora, usuario, pregunta, herramientas y parámetros, nº de filas, latencia, respuesta, errores. Sin datos completos. Retención 90 días.
+- Límite: 30 consultas/hora.
+- El dueño acepta que los datos del negocio se envíen a la API de Anthropic.
