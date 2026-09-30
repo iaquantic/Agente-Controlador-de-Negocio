@@ -70,3 +70,11 @@ Registro de lo validado en la entrevista por fases. No accesible para el agente.
 ## Fase 6 — Casos de uso
 - Lista de 30 casos validada: `docs/casos_de_uso.md` (incluye top 5 para demo, aceptado por defecto).
 - Beneficio neto: no disponible en el MVP. Predicciones: sí, simples y marcadas 💡.
+
+## Fase 7 — Herramientas (todas las propuestas aprobadas)
+- Solo herramientas específicas; sin SQL libre en el MVP.
+- Cálculos como funciones de solo lectura en Supabase, esquema `agente` (fuente única de métricas, reutilizable por el orquestador).
+- Alertas detectadas por código fijo (`get_alerts`); el modelo solo redacta.
+- Búsqueda aproximada de productos con `pg_trgm`; si hay varias coincidencias, el agente pregunta.
+- Pregunta sin herramienta: ❔ + qué sí puede ofrecer + queda registrada.
+- Herramientas: get_business_summary, get_sales_summary, get_top_products, find_products, get_product, get_product_history, get_inventory_status, get_margin_analysis, get_alerts, get_returns_and_voids, get_exchange_rate, get_data_quality.
