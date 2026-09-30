@@ -19,3 +19,23 @@ Registro de lo validado en la entrevista por fases. No accesible para el agente.
 - Todo se vende por unidades.
 - RLS activado sin políticas; el acceso de solo lectura del agente se define en la fase 5.
 - Datos (ventas, stock, compras) se generan tras la fase 3.
+
+## Fase 3 — Métricas y reglas (todas las propuestas aprobadas)
+- No disponible: beneficio neto (no hay gastos fijos; solo beneficio bruto), caducidades/lotes, clientes, precios de mercado (Agente Externo).
+- Métricas: ventas día/semana/mes, ingresos USD y CUP, unidades, ticket medio, ventas por canal y forma de pago, coste de lo vendido, beneficio y margen bruto, más/menos vendidos, sin ventas, velocidad de venta, stock actual/mínimo, días de cobertura, riesgo de rotura, exceso, rotación, dinero inmovilizado, evolución vs periodo anterior y vs año anterior.
+- Ventas netas = completadas − devoluciones (anuladas excluidas). Margen bruto = (ventas netas − coste) / ventas netas, en USD; en CUP con la tasa de cada venta.
+- Velocidad = unidades últimos 30 días / 30. Cobertura = stock / velocidad. Rotación = coste vendido / inventario medio. Día comercial en America/Havana; semana empieza el lunes.
+- Agotado: stock = 0. Stock bajo: stock ≤ stock mínimo. Stock mínimo: 7 días de venta (Mercado), 14 (Envíos). Plazo de reposición: 7 días (Mercado), 21 (Envíos). Riesgo de rotura: cobertura < plazo. Exceso: cobertura > 90 días. Sin movimiento: 0 ventas en 30 días con stock. Baja rotación: < 25 % de la media de su categoría.
+- Prioritarios: top 20 % por ingresos (ABC) + básicos (comida y aseo).
+- Anomalías: ventas del día ±30 % vs media del mismo día de la semana (4 semanas); anuladas > 3 % semanal; devoluciones > 5 % de un producto en 30 días; margen < 10 %; tasa elTOQUE ±5 % en una semana; producto activo sin precio vigente; stock sin ventas en 30 días.
+- Horario: tienda física L–S 9:00–19:00, domingo 9:00–13:00; web 24 h.
+- Márgenes objetivo: comida/combos 15–25 %, aseo 25–35 %, farmacia 30–40 %, ferretería 30–40 %, electrodomésticos 20–30 %, energía 20–30 %.
+- Se siembran situaciones de prueba (agotados, excesos, devoluciones anómalas, semana de caída).
+
+### Ajustes de mercado cubano para generar el historial
+- Estacionalidad: diciembre y fin de año altos; fines de semana más fuertes; ventiladores/aires con pico junio–septiembre; energía (plantas, paneles, baterías, lámparas recargables) alta todo el año; comida y aseo estables.
+- Picos: Día de las Madres (2.º domingo de mayo), primeros días de mes (remesas y cobros), 24–31 de diciembre.
+- Días festivos con tienda física cerrada o reducida: 1 de enero, 1 de mayo, 25–27 de julio, 10 de octubre, 25 de diciembre.
+- Apagones: algunos días con ventas físicas reducidas (sin afectar a la web).
+- Formas de pago: mezcla de efectivo CUP, transferencia CUP (Transfermóvil/EnZona) y efectivo USD; pagos mixtos ocasionales.
+- Tasas: histórico real diario de elTOQUE (`scripts/demo/datos/tasas_eltoque.csv`, 2025-10-01 a 2026-09-30).
