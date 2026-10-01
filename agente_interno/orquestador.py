@@ -44,6 +44,10 @@ def _cifra(x) -> str:
     return f"{float(x):,.2f}".replace(",", " ").replace(".", ",")
 
 
+def _pct_txt(x) -> str:
+    return f"{float(x):+.1f}".replace(".", ",")
+
+
 class Informes:
     """Informes predefinidos construidos de forma determinista a partir de las herramientas."""
 
@@ -75,7 +79,7 @@ class Informes:
             }
             alerts = _alertas(al)
             resumen = (f"Hoy hasta las {d['as_of_hour']}: {_cifra(d['today']['net_usd'])} USD en {d['today']['tickets']} ventas "
-                       f"({d['vs_expected_pct']:+} % frente a lo esperado). {len(alerts)} alertas urgentes o altas.") \
+                       f"({_pct_txt(d['vs_expected_pct'])} % frente a lo esperado). {len(alerts)} alertas urgentes o altas.") \
                 if d["vs_expected_pct"] is not None else f"Hoy: {_cifra(d['today']['net_usd'])} USD. {len(alerts)} alertas urgentes o altas."
         elif tipo == "ventas":
             ss = await self._h("get_sales_summary", {**per, "group_by": "channel", "compare": "previous_period"}, u)
@@ -95,7 +99,7 @@ class Informes:
                 findings.append({"id": f"P{p['rank']}", "kind": "calculation", "category": "ventas",
                                  "title": f"Top {p['rank']} por ingresos: {p['name']}",
                                  "detail": f"{_cifra(p['revenue_usd'])} USD ({p['share_pct']} % del total).", "evidence": p})
-            resumen = f"Ventas netas {_cifra(t['net_usd'])} USD ({c['delta_pct']['net_usd']:+} % frente al periodo anterior)." \
+            resumen = f"Ventas netas {_cifra(t['net_usd'])} USD ({_pct_txt(c['delta_pct']['net_usd'])} % frente al periodo anterior)." \
                 if c["delta_pct"]["net_usd"] is not None else f"Ventas netas {_cifra(t['net_usd'])} USD."
         elif tipo == "inventario":
             inv = await self._h("get_inventory_status", {"filter": "all_issues"}, u)

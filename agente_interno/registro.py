@@ -17,7 +17,7 @@ log = logging.getLogger(__name__)
 
 class Registro:
     def __init__(self, url: str | None, archivo: str):
-        self.pool = AsyncConnectionPool(url, min_size=1, max_size=2, open=False) if url else None
+        self.pool = AsyncConnectionPool(url, min_size=1, max_size=2, open=False, kwargs={"prepare_threshold": None}) if url else None
         self.archivo = archivo
         self._alertas: dict[str, datetime] = {}        # respaldo en memoria si no hay BD
 
@@ -98,9 +98,14 @@ class Registro:
             " values (%s, %s, %s, %s, %s) on conflict do nothing",
             (alerta["alert_key"], alerta["rule"], alerta["priority"], ahora, ahora))
 
-    async def purgar(self) -> None:
-        if self.pool:
-            await self._sql("select registro.purgar(90)", ())
+    async def purgar(self, dias: int = 90) -> None:
+        """Retención: borra los registros de más de `dias` días (06 §6.7)."""
+        if not self.pool:
+            return
+        limite = datetime.now(timezone.utc) - timedelta(days=dias)
+        for tabla, columna in (("interacciones", "fecha_hora"), ("alertas_enviadas", "fecha_deteccion"),
+                               ("accesos_denegados", "fecha_hora"), ("preguntas_sin_herramienta", "fecha_hora")):
+            await self._sql(f"delete from registro.{tabla} where {columna} < %s", (limite,))
 
 
 class LimiteUso:

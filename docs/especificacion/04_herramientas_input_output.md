@@ -17,7 +17,7 @@ Las cifras de los ejemplos son **ilustrativas** salvo las de agosto de 2026 (ver
   "generated_at": "2026-09-30T11:30:02-04:00",
   "fx": { "date": "2026-09-30", "usd_cup": 741.74, "source": "elTOQUE" },
   "data": { },
-  "kinds": { "data.totals.net_usd": "calculation", "data.totals.tickets": "fact" },
+  "kinds": { "fact": ["tickets", "units"], "calculation": ["net_usd", "gross_margin_pct"] },
   "warnings": [ "1 producto activo sin precio" ]
 }
 ```
@@ -29,7 +29,7 @@ Errores (sin detalles técnicos):
   "message": "No encontré ningún producto con ese código.", "generated_at": "..." }
 ```
 
-`kinds` marca como `fact` los valores leídos tal cual (stock, precio vigente, fechas, conteos) y como `calculation` los derivados
+`kinds` lista por nombre de campo los que son `fact` los valores leídos tal cual (stock, precio vigente, fechas, conteos) y como `calculation` los derivados
 (importes netos, márgenes, velocidades, coberturas, porcentajes). Las herramientas **nunca** devuelven `inference`: eso lo añade el modelo.
 
 ---

@@ -93,6 +93,7 @@
 | `data_quality` | Frescura, tasa usada y avisos |
 | `tools_used` | Herramientas ejecutadas |
 | `generated_at` | ISO 8601, hora de La Habana |
+| `tool_result` | Solo con `type=tool`: el bloque `data` que devuelve la herramienta, tal cual |
 
 Error:
 ```json

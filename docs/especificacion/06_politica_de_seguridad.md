@@ -55,7 +55,7 @@ Esquema `registro`, retención **90 días**:
 | `accesos_denegados` | fecha_hora, telegram_user_id, chat_type, texto (truncado a 200 caracteres) |
 | `preguntas_sin_herramienta` | fecha_hora, pregunta (para decidir herramientas nuevas) |
 
-**No** se guardan los datos completos devueltos por las herramientas.
+**No** se guardan los datos completos devueltos por las herramientas. La retención la aplica el servicio cada día a las 3:00 (borra lo anterior a 90 días con el rol `agente_registro`).
 
 ## 6.8 Datos enviados a terceros
 - A la **API de Anthropic**: pregunta, resultados de herramientas y respuesta (aceptado por el dueño).

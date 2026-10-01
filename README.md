@@ -20,8 +20,16 @@ AGENTE ORQUESTADOR
 | `docs/casos_de_uso.md` | 30 preguntas reales del dueño |
 | `supabase/migrations/` | Esquema de la base de datos |
 | `scripts/demo/` | Catálogo, tasas reales de elTOQUE y generador del historial del negocio de demostración |
+| `agente_interno/` | Servicio: agente (Claude), bot de Telegram, planificador, API del orquestador, registro |
+| `tests/` | Pruebas automáticas (ver `tests/README.md`) |
 
 ## Estado
-- ✅ Diseño completo y validado.
-- ✅ Base de datos creada con 12 meses de historial (MercadoAgentico).
-- ⏳ Por construir: funciones del esquema `agente` + rol de solo lectura, servicio Python (bot, modelo, planificador, API interna, registro), alimentador diario, ejecución de las pruebas.
+- ✅ Diseño completo y validado (`docs/especificacion/`).
+- ✅ Base de datos MercadoMVP con 12 meses de historial y el esquema `agente` (12 herramientas de solo lectura, roles y registro).
+- ✅ Servicio Python: bot de Telegram, Claude con las 12 herramientas, alertas y resumen diario, API para el orquestador.
+- ✅ Pruebas: 79 automáticas (herramientas, seguridad, servicio, orquestador) + 17 conversacionales con Claude.
+- ⏳ Pendiente: desplegar en un VPS (ver `docs/DESPLIEGUE.md`) y el alimentador diario de datos de demostración.
+
+## Arranque rápido
+Ver **[docs/DESPLIEGUE.md](docs/DESPLIEGUE.md)**: crear el bot, activar los usuarios de la base de datos, rellenar `.env` y
+`python -m agente_interno`.

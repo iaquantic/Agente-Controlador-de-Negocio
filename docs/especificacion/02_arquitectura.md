@@ -52,9 +52,9 @@
 
 **Resumen diario (19:30)**: `get_business_summary` + `get_alerts` + `get_data_quality` → Claude redacta → Telegram → registro.
 
-**Alertas urgentes (cada 30 min, 8:00–21:00)**: `get_alerts(prioridad_minima='urgent')` → descartar las enviadas en 24 h y respetar máx. 3/día → Claude redacta → Telegram. Las detectadas entre 21:00 y 8:00 se envían a las 8:00.
+**Alertas urgentes (cada 30 min, 8:00–21:00)**: `get_alerts(min_priority='urgent')` → descartar las enviadas en 24 h y respetar máx. 3/día → texto con plantilla fija (título y detalle que da la BD; sin modelo, para que lleguen al instante y siempre igual) → Telegram. Lo que siga activo tras el silencio nocturno se envía en la revisión de las 8:00.
 
-**Orquestador**: `POST /v1/consulta` (token) → informe predefinido, pregunta o herramienta → JSON (8) → registro. Nunca envía mensajes al dueño.
+**Orquestador**: `POST /v1/consulta` (token) → informe predefinido (construido de forma determinista a partir de las herramientas, sin modelo), pregunta (con Claude) o herramienta directa → JSON (8) validado contra el esquema → registro. Nunca envía mensajes al dueño.
 
 ## 2.4 Decisiones clave
 | Decisión | Motivo |

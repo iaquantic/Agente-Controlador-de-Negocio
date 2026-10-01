@@ -38,7 +38,7 @@ class BaseDatos:
         self.reloj = reloj
         self.negocio_id = negocio_id
         self.pool = AsyncConnectionPool(url, min_size=1, max_size=max_size, open=False, timeout=15,
-                                        kwargs={"autocommit": False})
+                                        kwargs={"autocommit": False, "prepare_threshold": None})
         self._validadores = {n: Draft202012Validator(ESQUEMAS[n]) for n in NOMBRES}
 
     async def abrir(self) -> None:

@@ -25,8 +25,9 @@ do $$
 declare t text;
 begin
   for t in select tablename from pg_tables where schemaname = 'public' loop
-    execute format('drop policy if exists agente_owner_lectura on public.%I', t);
-    execute format('create policy agente_owner_lectura on public.%I for select to agente_owner using (true)', t);
+    if not exists (select 1 from pg_policies where schemaname = 'public' and tablename = t and policyname = 'agente_owner_lectura') then
+      execute format('create policy agente_owner_lectura on public.%I for select to agente_owner using (true)', t);
+    end if;
   end loop;
 end $$;
 
@@ -41,7 +42,18 @@ begin
 end $$;
 grant execute on all functions in schema agente to agente_owner;
 
--- Las 12 herramientas pertenecen a agente_owner (SECURITY DEFINER).
+-- search_path fijo también en las funciones internas (aviso 0011 del revisor de Supabase).
+do $$
+declare f record;
+begin
+  for f in select p.oid::regprocedure sig from pg_proc p where p.pronamespace = 'agente'::regnamespace and p.proname like '\_%' loop
+    execute format('alter function %s set search_path = agente, public, extensions, pg_temp', f.sig);
+  end loop;
+end $$;
+
+-- Las 12 herramientas pertenecen a agente_owner (SECURITY DEFINER). Cambiar el propietario exige que el nuevo
+-- propietario tenga CREATE en el esquema: se le concede solo durante el cambio.
+grant create on schema agente to agente_owner;
 alter function agente.get_business_summary(jsonb) owner to agente_owner;
 alter function agente.get_sales_summary(jsonb) owner to agente_owner;
 alter function agente.get_top_products(jsonb) owner to agente_owner;
@@ -54,6 +66,7 @@ alter function agente.get_alerts(jsonb) owner to agente_owner;
 alter function agente.get_returns_and_voids(jsonb) owner to agente_owner;
 alter function agente.get_exchange_rate(jsonb) owner to agente_owner;
 alter function agente.get_data_quality(jsonb) owner to agente_owner;
+revoke create on schema agente from agente_owner;
 
 -- agente_lectura: solo las 12 herramientas ----------------------------------
 grant usage on schema agente to agente_lectura;
@@ -113,17 +126,10 @@ create table registro.preguntas_sin_herramienta (
   pregunta   text not null
 );
 
-create function registro.purgar(dias int default 90) returns void language sql as $$
-  delete from registro.interacciones where fecha_hora < now() - dias * interval '1 day';
-  delete from registro.alertas_enviadas where fecha_deteccion < now() - dias * interval '1 day';
-  delete from registro.accesos_denegados where fecha_hora < now() - dias * interval '1 day';
-  delete from registro.preguntas_sin_herramienta where fecha_hora < now() - dias * interval '1 day';
-$$;
+-- La retención de 90 días la aplica el servicio (Registro.purgar) con el rol agente_registro.
 
 revoke all on schema registro from public;
-revoke execute on function registro.purgar(int) from public;
 grant usage on schema registro to agente_registro;
 grant select, insert, update, delete on all tables in schema registro to agente_registro;
-grant execute on function registro.purgar(int) to agente_registro;
 alter role agente_registro set statement_timeout = '10s';
 alter role agente_registro set search_path = registro;
