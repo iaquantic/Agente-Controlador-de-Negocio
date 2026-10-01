@@ -299,9 +299,9 @@ begin
     select jsonb_agg(jsonb_build_object('method', metodo, 'currency', moneda,
                                         'amount', case when moneda = 'CUP' then round(imp, 0) else round(imp, 2) end,
                                         'amount_usd_equiv', round(eq, 2),
-                                        'share_pct', round(eq / nullif(sum(eq) over (), 0) * 100, 1))
+                                        'share_pct', round(eq / nullif(total, 0) * 100, 1))
                      order by eq desc)
-    into grupos from pg;
+    into grupos from (select pg.*, sum(eq) over () total from pg) x;
   elsif agrupar <> 'none' then
     select jsonb_agg(jsonb_build_object('key', s.clave)
                      || agente._totales_json(s.bruto_usd, s.bruto_cup, s.devol_usd, s.devol_cup, s.coste, s.tickets, s.unidades, s.anuladas)
@@ -408,7 +408,7 @@ end $$;
 -- 4. find_products -------------------------------------------------------------
 create function agente.find_products(p jsonb default '{}') returns jsonb
 language plpgsql stable security definer set search_path = agente, public, extensions, pg_temp as $$
-declare q text; lim int; inactivos boolean; res jsonb; s1 numeric; s2 numeric; n int;
+declare q text; lim int; inactivos boolean; res jsonb; s1 numeric; s2 numeric; v_exacto boolean;
 begin
   perform agente._claves(p, array['query', 'limit', 'include_inactive']);
   q := agente._texto(p, 'query', true, 2, 60);
@@ -416,32 +416,27 @@ begin
   inactivos := agente._bool(p, 'include_inactive', false);
 
   with c as (
-    select p.sku, p.nombre, pc.nombre || ' › ' || sc.nombre cat, p.activo,
+    select p.sku, p.nombre, pc.nombre || ' › ' || sc.nombre cat, p.activo, upper(p.sku) = upper(q) exacto,
            case when upper(p.sku) = upper(q) then 1.0
                 else greatest(extensions.similarity(agente._norm(p.nombre), agente._norm(q)),
                               extensions.word_similarity(agente._norm(q), agente._norm(p.nombre)),
-                              extensions.similarity(agente._norm(sc.nombre), agente._norm(q)) * 0.8) end sim
+                              extensions.similarity(agente._norm(sc.nombre), agente._norm(q)) * 0.8)::numeric end sim
     from public.productos p join public.categorias sc on sc.id = p.categoria_id
     join public.categorias pc on pc.id = sc.categoria_padre_id
     where p.negocio_id = agente._neg() and (inactivos or p.activo)
   ), f as (
-    select * from c where sim >= 0.3 order by sim desc, nombre limit lim
+    select *, row_number() over (order by sim desc, nombre) rn from c where sim >= 0.35 order by sim desc, nombre limit lim
   )
   select jsonb_agg(jsonb_build_object('sku', sku, 'name', nombre, 'category', cat, 'active', activo, 'similarity', round(sim, 2))
-                   order by sim desc, nombre),
-         max(sim), count(*)
-  into res, s1, n from f;
-  select sim into s2 from (
-    select greatest(extensions.similarity(agente._norm(p.nombre), agente._norm(q)),
-                    extensions.word_similarity(agente._norm(q), agente._norm(p.nombre))) sim
-    from public.productos p where p.negocio_id = agente._neg() and (inactivos or p.activo)
-    order by 1 desc offset 1 limit 1) x;
+                   order by rn),
+         max(sim) filter (where rn = 1), max(sim) filter (where rn = 2), bool_or(exacto)
+  into res, s1, s2, v_exacto from f;
 
+  -- Ambiguo: dos o más candidatos razonables con puntuación parecida (salvo código exacto).
   return agente._sobre('find_products', jsonb_build_object('query', q, 'limit', lim, 'include_inactive', inactivos),
     null, null,
     case when res is null then null
-         else jsonb_build_object('matches', res,
-                                 'ambiguous', n > 1 and s1 < 1 and s2 >= 0.35 and s1 - s2 < 0.15) end,
+         else jsonb_build_object('matches', res, 'ambiguous', not coalesce(v_exacto, false) and s2 is not null and s1 - s2 < 0.15) end,
     array['similarity'], array['sku', 'name', 'active']);
 exception when others then
   if sqlstate = '57014' then raise; end if;
@@ -634,14 +629,14 @@ begin
     where d.fecha >= ini and d.fecha < fin group by 1
   ), a as (
     select l.k, max(l.nom) nom,
-           sum(c) filter (where actual) u,
-           sum(r) filter (where actual) - coalesce(max(dv.r), 0) net,
-           sum(co) filter (where actual) - coalesce(max(dv.co), 0) cogs,
-           sum(r) filter (where not actual) net_p, sum(co) filter (where not actual) cogs_p,
-           sum(co) filter (where actual) / nullif(sum(c) filter (where actual), 0) cu,
-           sum(co) filter (where not actual) / nullif(sum(c) filter (where not actual), 0) cu_p,
-           sum(r) filter (where actual) / nullif(sum(c) filter (where actual), 0) pu,
-           sum(r) filter (where not actual) / nullif(sum(c) filter (where not actual), 0) pu_p
+           sum(l.c) filter (where actual) u,
+           sum(l.r) filter (where actual) - coalesce(max(dv.r), 0) net,
+           sum(l.co) filter (where actual) - coalesce(max(dv.co), 0) cogs,
+           sum(l.r) filter (where not actual) net_p, sum(l.co) filter (where not actual) cogs_p,
+           sum(l.co) filter (where actual) / nullif(sum(l.c) filter (where actual), 0) cu,
+           sum(l.co) filter (where not actual) / nullif(sum(l.c) filter (where not actual), 0) cu_p,
+           sum(l.r) filter (where actual) / nullif(sum(l.c) filter (where actual), 0) pu,
+           sum(l.r) filter (where not actual) / nullif(sum(l.c) filter (where not actual), 0) pu_p
     from l left join dv on dv.k = l.k group by l.k
   ), m as (
     select *, case when net > 0 then round((net - cogs) / net * 100, 1) end mg,

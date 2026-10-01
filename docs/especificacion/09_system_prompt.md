@@ -7,8 +7,9 @@ Se mantiene en un archivo aparte para que el servicio lo cargue tal cual y para 
 | Variable | Valor | Ejemplo |
 |---|---|---|
 | `{{NOMBRE_NEGOCIO}}` | Nombre del negocio (tabla `negocios`) | `MercadoAgentico` |
-| `{{AHORA_HABANA}}` | Fecha y hora actuales en America/Havana, con día de la semana | `miércoles 30 de septiembre de 2026, 11:30` |
 | `{{CANAL}}` | `telegram` u `orquestador` | `telegram` |
+
+La fecha y hora actuales **no** van en el system prompt (lo haría distinto en cada petición e invalidaría la caché): el servicio antepone a cada mensaje `[Ahora en La Habana: miércoles 30 de septiembre de 2026, 11:30]`.
 
 ## 9.2 Estructura
 | Bloque | Función |

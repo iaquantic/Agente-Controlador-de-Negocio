@@ -463,7 +463,7 @@ language sql stable as $$
          case when abc.rn <= ceil((select count(*) from m m2 where m2.activo) * agente._p('abc_top_pct') / 100.0) then 'A'
               when abc.rn <= ceil((select count(*) from m m2 where m2.activo) * 0.5) then 'B'
               else 'C' end,
-         m.activo and (m.basico or abc.rn <= ceil((select count(*) from m m2 where m2.activo) * agente._p('abc_top_pct') / 100.0)),
+         m.activo and (m.basico or coalesce(abc.rn <= ceil((select count(*) from m m2 where m2.activo) * agente._p('abc_top_pct') / 100.0), false)),
          case
            when not m.activo then 'inactivo'
            when m.stock_actual <= 0 and m.u60 > 0 then 'agotado'
