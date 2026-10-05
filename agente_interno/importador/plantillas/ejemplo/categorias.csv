@@ -1,0 +1,4 @@
+categoria;linea;plazo_dias;dias_stock_minimo;basico
+Alimentos;Mercado;7;7;sí
+Aseo e higiene;Mercado;7;7;sí
+Climatización;Envíos;21;14;no

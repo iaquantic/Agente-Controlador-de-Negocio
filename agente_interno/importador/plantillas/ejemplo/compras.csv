@@ -1,0 +1,11 @@
+referencia;fecha;proveedor;sku;cantidad;coste_unitario;moneda;estado
+C-0901;01/09/2026;Distribuidora Habana;ARR-1KG;60;0,85;USD;recibida
+C-0901;01/09/2026;Distribuidora Habana;ACE-1L;30;2,60;USD;recibida
+C-0901;01/09/2026;Distribuidora Habana;POL-10LB;12;10,50;USD;recibida
+C-0905;05/09/2026;Avícola del Oeste;HUE-30;20;6,20;USD;recibida
+C-0910;10/09/2026;Importadora Caribe;VEN-18;10;48,00;USD;recibida
+C-0915;15/09/2026;Distribuidora Habana;DET-1L;24;1,90;USD;recibida
+C-0915;15/09/2026;Distribuidora Habana;JAB-3;36;0,90;USD;recibida
+C-0915;15/09/2026;Distribuidora Habana;CAF-250;20;1350;CUP;recibida
+C-0922;22/09/2026;Avícola del Oeste;HUE-30;10;6,80;USD;recibida
+C-1003;03/10/2026;Distribuidora Habana;ACE-1L;24;2,75;USD;pendiente
