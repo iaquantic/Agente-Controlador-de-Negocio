@@ -6,3 +6,4 @@ fastapi>=0.115
 uvicorn>=0.32
 jsonschema>=4.23
 python-dotenv>=1.0
+openpyxl>=3.1

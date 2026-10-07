@@ -21,6 +21,7 @@ AGENTE ORQUESTADOR
 | `supabase/migrations/` | Esquema de la base de datos |
 | `scripts/demo/` | Catálogo, tasas reales de elTOQUE y generador del historial del negocio de demostración |
 | `agente_interno/` | Servicio: agente (Claude), bot de Telegram, planificador, API del orquestador, registro |
+| `agente_interno/importador/` | Importador de los datos de un negocio real desde CSV o Excel ([docs/IMPORTACION.md](docs/IMPORTACION.md)) |
 | `tests/` | Pruebas automáticas (ver `tests/README.md`) |
 
 ## Estado
@@ -28,8 +29,13 @@ AGENTE ORQUESTADOR
 - ✅ Base de datos MercadoMVP con 12 meses de historial y el esquema `agente` (12 herramientas de solo lectura, roles y registro).
 - ✅ Servicio Python: bot de Telegram, Claude con las 12 herramientas, alertas y resumen diario, API para el orquestador.
 - ✅ Pruebas: 79 automáticas (herramientas, seguridad, servicio, orquestador) + 17 conversacionales con Claude.
-- ⏳ Pendiente: desplegar en un VPS (ver `docs/DESPLIEGUE.md`) y el alimentador diario de datos de demostración.
+- ✅ Importador de datos reales: catálogo, ventas, compras, devoluciones, inventario y tasas desde CSV o Excel, con
+  validación por fila, stock y coste medio reconstruidos y base de datos nueva por cliente ([docs/IMPORTACION.md](docs/IMPORTACION.md)).
+- ⏳ Pendiente: recibir los archivos del cliente por Telegram (hoy llegan a la carpeta del servidor) y desplegar con un negocio real.
 
 ## Arranque rápido
 Ver **[docs/DESPLIEGUE.md](docs/DESPLIEGUE.md)**: crear el bot, activar los usuarios de la base de datos, rellenar `.env` y
 `python -m agente_interno`.
+
+Para un **negocio real**, antes: base de datos nueva y carga de sus datos con el importador
+(**[docs/IMPORTACION.md](docs/IMPORTACION.md)**).

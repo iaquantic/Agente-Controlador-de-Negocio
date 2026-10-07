@@ -1,0 +1,24 @@
+numero;fecha;sku;cantidad;precio;moneda;canal;metodo_pago;estado
+T-1001;20/09/2026 09:42;ARR-1KG;3;1,20;USD;tienda;efectivo;completada
+T-1001;20/09/2026 09:42;ACE-1L;1;3,50;USD;tienda;efectivo;completada
+T-1002;20/09/2026 11:15;POL-10LB;1;10220;CUP;tienda;transferencia;completada
+T-1003;21/09/2026 16:03;HUE-30;2;7,50;USD;tienda;efectivo;completada
+T-1003;21/09/2026 16:03;CAF-250;1;1900;CUP;tienda;efectivo;completada
+T-1004;23/09/2026 10:30;VEN-18;1;65,00;USD;web;efectivo;completada
+T-1005;24/09/2026 12:10;DET-1L;2;2,80;USD;tienda;efectivo;completada
+T-1005;24/09/2026 12:10;JAB-3;3;1,50;USD;tienda;efectivo;completada
+T-1006;25/09/2026 17:45;ARR-1KG;5;1,20;USD;tienda;efectivo;anulada
+T-1007;26/09/2026 09:05;HUE-30;3;7,50;USD;tienda;efectivo;completada
+T-1007;26/09/2026 09:05;ACE-1L;2;3,50;USD;tienda;efectivo;completada
+T-1008;27/09/2026 13:20;POL-10LB;2;14,00;USD;web;efectivo;completada
+T-1009;28/09/2026 15:00;CAF-250;3;1900;CUP;tienda;transferencia;completada
+T-1010;29/09/2026 10:12;VEN-18;1;65,00;USD;tienda;efectivo;completada
+T-1011;30/09/2026 11:30;ARR-1KG;10;1,20;USD;tienda;efectivo;completada
+T-1011;30/09/2026 11:30;ACE-1L;4;3,50;USD;tienda;efectivo;completada
+T-1012;01/10/2026 09:40;HUE-30;4;7,50;USD;tienda;efectivo;completada
+T-1013;02/10/2026 14:22;DET-1L;3;2,80;USD;tienda;efectivo;completada
+T-1014;03/10/2026 10:05;POL-10LB;1;14,00;USD;tienda;efectivo;completada
+T-1014;03/10/2026 10:05;ARR-1KG;6;1,20;USD;tienda;efectivo;completada
+T-1015;04/10/2026 12:48;ACE-1L;3;3,50;USD;web;efectivo;completada
+T-1015;04/10/2026 12:48;JAB-3;2;1,50;USD;web;efectivo;completada
+T-1016;04/10/2026 18:10;HUE-30;6;7,50;USD;tienda;efectivo;completada

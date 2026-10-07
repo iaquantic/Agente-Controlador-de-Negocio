@@ -1,0 +1,9 @@
+sku;nombre;categoria;subcategoria;unidad;precio;moneda;coste;stock_minimo;activo
+ARR-1KG;Arroz 1 kg;Alimentos;Granos y básicos;unidad;1,20;USD;0,85;20;sí
+ACE-1L;Aceite de girasol 1 L;Alimentos;Granos y básicos;unidad;3,50;USD;2,60;10;sí
+POL-10LB;Pollo troceado 10 lb;Alimentos;Cárnicos y congelados;unidad;14,00;USD;10,50;5;sí
+HUE-30;Huevos cartón 30 u;Alimentos;Cárnicos y congelados;unidad;7,50;USD;6,20;5;sí
+CAF-250;Café molido 250 g;Alimentos;Despensa y conservas;unidad;1900;CUP;;6;sí
+DET-1L;Detergente líquido 1 L;Aseo e higiene;Limpieza del hogar;unidad;2,80;USD;1,90;8;sí
+JAB-3;Jabón de tocador (3 u);Aseo e higiene;Higiene personal;unidad;1,50;USD;0,90;10;sí
+VEN-18;Ventilador de pedestal 18";Climatización;Ventiladores;unidad;65,00;USD;48,00;2;sí
